@@ -14,6 +14,10 @@ describe OpenWeather do
       expect(@openweather.get_data).to be_kind_of(Hash)
     end
 
+    it "Should have either a float or integer as its id" do
+      expect(@openweather.get_id).to be_kind_of(Float) | be_kind_of(Integer)
+    end
+
   end
 
 end

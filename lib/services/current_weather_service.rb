@@ -13,6 +13,8 @@ class CurrentWeatherService
   def get_data
       @weather_data
   end
+
+  def get_id
+    @weather_data["id"]
+  end
 end
-services = CurrentWeatherService.new
-puts services.get_weather_data(53654).class
