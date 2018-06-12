@@ -6,7 +6,7 @@ describe OpenWeather do
   context 'Requesting weather information for a single city' do
     before(:all) do
       @openweather = OpenWeather.new.get_current_weather_service
-      @random_city_id = GeneratorService.new.generate_city_id
+      @random_city_id = GeneratorService.new.generate_city_name
       @openweather.get_weather_data(@random_city_id)
     end
 
@@ -20,6 +20,14 @@ describe OpenWeather do
 
     it "Should have a name which is a string" do
       expect(@openweather.check_name_string).to be_kind_of(String)
+    end
+
+    it "Should have a country which is a String" do
+      expect(@openweather.check_country_string).to be_kind_of(String)
+    end
+
+    it "Should have a country string of two characters" do
+      expect(@openweather.)
     end
   end
 

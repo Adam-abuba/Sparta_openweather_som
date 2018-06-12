@@ -20,4 +20,9 @@ class CurrentWeatherService
   def check_name_string
     @weather_data["name"]
   end
+  def check_country_string
+    @weather_data['sys']["country"]
+  end
 end
+services = CurrentWeatherService.new
+puts services.get_weather_data(14256)
