@@ -6,11 +6,11 @@ class GeneratorService
   include HTTParty
 
   def initialize
-    @random_city_id_array = YAML.load_file('city_id.yml')
+    @random_city_id_array = YAML.load_file('/Users/tech-a02/Documents/engineering-9/Sparta_openweather_som/lib/generator/city_id.yml')
 
-    @random_city_name_string = File.read('city.list.json')
+    random_city_name_string = File.read('/Users/tech-a02/Documents/engineering-9/Sparta_openweather_som/lib/generator/city.list.json')
 
-    @random_city_name_array = JSON.parse(@random_city_name_string)
+    @random_city_name_array = JSON.parse(random_city_name_string)
   end
 
   def generate_city_name
@@ -23,6 +23,18 @@ class GeneratorService
     end
     @random_city
   end
+  #
+  # def generate_city_name
+  #   @random_city['name']
+  # end
+  #
+  # def get_country
+  #   @random_city['country']
+  # end
+  #
+  # def get_city_by_name (name)
+  #   @random_city_id_array.select {|city| city['name']==name}.first
+  # end
 
 end
 
