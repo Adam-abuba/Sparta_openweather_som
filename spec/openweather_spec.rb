@@ -42,6 +42,10 @@ describe OpenWeather do
     it "Should have a weather condition id as an integer" do
       expect(@openweather.check_weather_id).to be_kind_of(Integer)
     end
-    
+
+    it "Should have a weather condition parameter as a String" do
+      expect(@openweather.check_weather_main).to be_kind_of(String)
+    end
+
   end
 end

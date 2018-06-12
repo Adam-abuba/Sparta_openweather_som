@@ -35,5 +35,9 @@ class CurrentWeatherService
   def check_weather_id
     @weather_data['weather'][0]['id']
   end
+  def check_weather_main
+    @weather_data['weather'][0]['main']
+
+  end
 
 end
