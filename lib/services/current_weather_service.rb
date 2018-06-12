@@ -17,4 +17,7 @@ class CurrentWeatherService
   def get_id
     @weather_data["id"]
   end
+  def check_name_string
+    @weather_data["name"]
+  end
 end

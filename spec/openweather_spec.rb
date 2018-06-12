@@ -18,6 +18,9 @@ describe OpenWeather do
       expect(@openweather.get_id).to be_kind_of(Float) | be_kind_of(Integer)
     end
 
+    it "Should have a name which is a string" do
+      expect(@openweather.check_name_string).to be_kind_of(String)
+    end
   end
 
 end
