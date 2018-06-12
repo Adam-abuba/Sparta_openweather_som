@@ -23,19 +23,6 @@ class GeneratorService
     end
     @random_city
   end
-  #
-  # def generate_city_name
-  #   @random_city['name']
-  # end
-  #
-  # def get_country
-  #   @random_city['country']
-  # end
-  #
-  # def get_city_by_name (name)
-  #   @random_city_id_array.select {|city| city['name']==name}.first
-  # end
-
 end
 
 service = GeneratorService.new

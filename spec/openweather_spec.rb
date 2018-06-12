@@ -31,5 +31,12 @@ describe OpenWeather do
     it "Should have a country string of two characters" do
       expect(@openweather.check_country_string_length).to eq(2)
     end
+
+    it "Should have Float for the longitude value" do
+      expect(@openweather.check_long_float).to be_kind_of(Float)
+    end
+    it "Should have Float for the latitude value" do
+      expect(@openweather.check_lat_float).to be_kind_of(Float)
+    end
   end
 end

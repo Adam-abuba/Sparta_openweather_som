@@ -26,5 +26,11 @@ class CurrentWeatherService
   def check_country_string_length
     @weather_data["sys"]["country"].length
   end
+  def check_long_float
+    @weather_data["coord"]["lon"]
+  end
+  def check_lat_float
+    @weather_data["coord"]["lat"]
+  end
 
 end
