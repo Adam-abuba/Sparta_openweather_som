@@ -32,5 +32,8 @@ class CurrentWeatherService
   def check_lat_float
     @weather_data["coord"]["lat"]
   end
+  def check_weather_id
+    @weather_data['weather'][0]['id']
+  end
 
 end

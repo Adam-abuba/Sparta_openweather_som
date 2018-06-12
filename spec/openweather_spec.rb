@@ -38,5 +38,10 @@ describe OpenWeather do
     it "Should have Float for the latitude value" do
       expect(@openweather.check_lat_float).to be_kind_of(Float)
     end
+
+    it "Should have a weather condition id as an integer" do
+      expect(@openweather.check_weather_id).to be_kind_of(Integer)
+    end
+    
   end
 end
